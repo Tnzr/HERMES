@@ -54,7 +54,7 @@ class Node:
         d2goal = norm(n-O)
         O_vector = (n-O) # vector pointing to object
         O_offset_theta = arccos(abs(dot(O_vector, n_)/(norm(O_vector)*norm(n_)))) # offset angle between heading vector and objective
-        return d2goal*(np.exp(em_offset_theta/np.pi) + np.exp(O_offset_theta/np.pi) + 1)
+        return d2goal*(np.exp(em_offset_theta/np.pi) + 1.1*np.exp(O_offset_theta/np.pi) + 1)
 
     def calculate_curl(self, charges):  # calculate curl vector at the Node's position
         u = 0
@@ -80,7 +80,7 @@ class Node:
         if len(charges) < 1:
             return array([0, 0])
         else:
-            return self.calculate_curl(charges=charges) #+ 0.1*self.div_map(charges=charges)
+            return self.calculate_curl(charges=charges) + 0.3*self.div_map(charges=charges)
 
     def update_error(self, charges):  # euclidean heuristic function
         emvector = self.calculate_curl(charges=charges) + 0.3*self.div_map(charges=charges)
@@ -145,10 +145,6 @@ class Agent:
         self.angle = orientation
 
 
-class LinkedList:
-    pass
-
-
 class PathPlanner:  # manages the tree expansion, and checks if the goal has been reached
     def __init__(self, init_node, goal, cone_angle=radians(30), growth_rate=3, dx=50, live=10):
         self.tree = init_node
@@ -207,18 +203,22 @@ if __name__ == '__main__':
     end = None
     run = False
     goal = Goal((700, 700), 40)
-    pf = PathPlanner(tree, goal, dx=25, growth_rate=5, cone_angle=radians(60))
+    pf = PathPlanner(tree, goal, dx=10, growth_rate=5, cone_angle=radians(60))
     res = 20
     iter = 0
     n_Q = len(pf.charges)
     fig, ax = plt.subplots()
     image = None
-    while True:
+    exit_program = False
+    while  not exit_program:
         t0 = time.time()
         for event in pygame.event.get():
             if event.type == pygame.KEYDOWN:
-                if event.type == pygame.QUIT:
+                if event.key == pygame.K_ESCAPE:
                     run = False
+                    pygame.quit()
+                    exit()
+                    
 
                 elif event.key == pygame.K_z: #positive
                     pos = pygame.mouse.get_pos()
@@ -255,5 +255,5 @@ if __name__ == '__main__':
             f = "inf"
         print(f"Iteration num: {iter} {f}Hz Charges: {len(pf.charges)} Paths: {len(pf.paths)}")
 
-    pygame.quit()
+
 
