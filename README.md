@@ -51,13 +51,11 @@ natural movement of electrons in a magnetic field.
 Path Planning Results:
 
 HERMES Cluttered Results:
-![HERMES Cluttered Results]
-(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results.png)
+![HERMES Cluttered Results](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results.png))
+
 
 HERMES Cluttered Results 2:
-![HERMES Cluttered Results 2]
-(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Obstacles.png)
+![HERMES Cluttered Results 2](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Obstacles.png)
 
 HERMES Small Step Size:
-![HERMES Small Step Size]
-(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Small_StepSize.png)
+![HERMES Small Step Size](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Small_StepSize.png)
