@@ -33,6 +33,10 @@ parametrizes the possible movement of the vehicle with L length and 𝜃 angle o
 incorporating the movement in the path planning we can arrive to a path that needs no post
 processing/smoothing to follow.
 
+Formulas:
+
+$E_{cost} = D_{goal} \cdot (A \cdot e^{\frac{\theta_{EM}}{\pi}} + B \cdot e^{\frac{\theta_{Goal}}{\pi}} + 1) $
+
 EM field with 100% Curl Gain and 10% Divergence Gain.
 ![EM field with 100% Curl Gain and 10% Divergence Gain](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/EMfield_Curl_100_Div_10_Field%2BMagnitude.png)
 
@@ -51,9 +55,9 @@ HERMES Cluttered Results:
 (https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results.png)
 
 HERMES Cluttered Results 2:
-![HERMES Cluttered Results]
+![HERMES Cluttered Results 2]
 (https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Obstacles.png)
 
 HERMES Small Step Size:
-![HERMES Cluttered Results]
+![HERMES Small Step Size]
 (https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Small_StepSize.png)
