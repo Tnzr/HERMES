@@ -34,7 +34,7 @@ incorporating the movement in the path planning we can arrive to a path that nee
 processing/smoothing to follow.
 
 EM field with 100% Curl Gain and 10% Divergence Gain.
-![EM field with 10% Curl Gain and 100% Divergence Gain](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/EMfield_Curl_100_Div_10_Field%2BMagnitude.png)
+![EM field with 100% Curl Gain and 10% Divergence Gain](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/EMfield_Curl_100_Div_10_Field%2BMagnitude.png)
 
 EM field with 10% Curl Gain and 100% Divergence Gain.
 ![EM field with 10% Curl Gain and 100% Divergence Gain](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/EMfield_Curl_10_Div_100_FIeld%2BMagnitude.png)
@@ -43,3 +43,17 @@ This work is a showcase of how making compromises between different methods can 
 results by removing each other’s drawbacks and concentrating on their pros. This path planning
 algorithm is as direct as it gets because it’s based on the principle of least resistance path to imitate the
 natural movement of electrons in a magnetic field.
+
+Path Planning Results:
+
+HERMES Cluttered Results:
+![HERMES Cluttered Results]
+(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results.png)
+
+HERMES Cluttered Results 2:
+![HERMES Cluttered Results]
+(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Obstacles.png)
+
+HERMES Small Step Size:
+![HERMES Cluttered Results]
+(https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Small_StepSize.png)
