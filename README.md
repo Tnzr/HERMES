@@ -46,7 +46,7 @@ Conclusion:
 This work is a showcase of how making compromises between different methods can give optimal
 results by removing each other’s drawbacks and concentrating on their pros. This path planning
 algorithm is as direct as it gets because it’s based on the principle of least resistance path to imitate the
-natural movement of electrons in a magnetic field.
+natural movement of electrons in a Electromagnetic field.
 
 Path Planning Results:
 
