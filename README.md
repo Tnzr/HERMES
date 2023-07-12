@@ -62,3 +62,8 @@ HERMES Cluttered Results 2:
 HERMES Small Step Size:
 
 ![HERMES Small Step Size](https://raw.githubusercontent.com/Tnzr/HERMES/master/results/Results_Small_StepSize.png)
+
+TODO:
+Exploring Distance as Cost Function Gradient
+Velocity as a function of curvature
+Hermes + LP-DLL
